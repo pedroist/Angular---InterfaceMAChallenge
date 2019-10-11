@@ -1,3 +1,27 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand title">InterfaceMA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">Option 1</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/search" class="nav-link">Option 2</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a routerLink="/search" class="nav-link">Option 3</a>
+        </li>    
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">Showcase</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">Dynamic</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

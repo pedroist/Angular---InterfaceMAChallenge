@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+//Bootstrap theme override
+$theme-colors: (
+    "dark": #111111,
+    "dark-blue": #203541,
+    "secondary": #e5e5e56b,
+    "turkey-blue": #249eacd4
+);
+@import "node_modules/bootstrap/scss/bootstrap";
