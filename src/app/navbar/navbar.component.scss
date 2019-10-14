@@ -1,7 +1,6 @@
 .title {
     font-size: 1.5rem;
     padding: 0;
-    color: #1F313A !important;
   }
 
   li {
@@ -10,4 +9,15 @@
 
   .navbar-dark .navbar-nav .nav-link {
     color: #ffffffcf;
+    min-width: max-content;
+  }
+
+  @media (min-width: 665px) {
+
+    .navbar li {
+      margin: auto 2px;
+    }
+    .navbar li:nth-last-of-type(3){
+      margin-right: 5vw;
+    }
   }

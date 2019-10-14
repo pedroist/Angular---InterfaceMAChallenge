@@ -15,6 +15,7 @@ import { FilterModalComponent } from './components/miscellaneous/filter-modal/fi
 import { SortDropdownComponent } from './components/miscellaneous/sort-dropdown/sort-dropdown.component';
 import { FiltersListComponent } from './components/miscellaneous/filters-list/filters-list.component';
 import { HousesFilterPipe } from './pipes/houses-filter.pipe';
+import { AppRoutingModule } from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HousesFilterPipe } from './pipes/houses-filter.pipe';
     HousesFilterPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
