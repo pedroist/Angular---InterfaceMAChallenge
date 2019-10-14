@@ -1,13 +1,17 @@
-<div class="card-house my-4 mx-5">
-  <img src="../../../../assets/img/house1.jpg" class="card-img" alt="House Image">
-<div class="card-info">
-  <h5>{{houseCard.params?.value}}</h5>
-  <div class="card-info-body">
-    {{houseCard.street}}
-    <h6>Rooms:</h6>
-    {{houseCard.params?.rooms}}
-    <h6>Price:</h6>
-    {{houseCard.params?.value}}
+<div class="card-house">
+  <img src={{imgPath}} class="card-img" alt="House Image">
+  <div class="card-info">
+    <h5>Appartment {{index}}</h5>
+    <div class="card-info-body">
+      <h6 *ngIf="houseCard.params?.rooms">
+        Rooms: 
+        <span>{{houseCard.params?.rooms}}</span>
+      </h6>
+      <h6 *ngIf="houseCard.params?.rooms">
+        Price: 
+        <span>{{houseCard.params?.value}}</span>
+      </h6>
+      {{houseCard.street}}
+    </div>
   </div>
-</div>
 </div>
