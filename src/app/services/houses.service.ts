@@ -20,8 +20,9 @@ export class HousesService {
 
   constructor(private http: HttpClient) { }
 
-  getHousesHttpRequest(): Observable<House[]> {
-    return this.http.get<House[]>(this.url);
+  getHousesHttpRequest(): Observable<any> {
+    let data = this.http.get(this.url);
+    return data;
   }
 
   getHousesInitialization() {
@@ -32,13 +33,13 @@ export class HousesService {
     if (houses) {
       this.housesSource.next(houses);
     } else {
-      this.getHousesHttpRequest().subscribe(houses => {
+      this.getHousesHttpRequest().subscribe(data => {
 
         // save the housesList with localStorage to persist this data
-        localStorage.setItem('housesList', JSON.stringify(houses));
+        localStorage.setItem('housesList', JSON.stringify(data.houses));
 
         // broadcast housesList to other components
-        this.housesSource.next(houses);
+        this.housesSource.next(data.houses);
       });
     }
   }

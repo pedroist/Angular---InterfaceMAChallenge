@@ -5,10 +5,10 @@ import { HousesService } from 'src/app/services/houses.service';
 @Component({
   selector: 'app-option1',
   templateUrl: './option1.component.html',
-  styleUrls: ['./option1.component.css']
+  styleUrls: ['./option1.component.scss']
 })
 export class Option1Component implements OnInit {
-  houses: House[];
+  housesList: House[] = [];
 
   constructor(private housesService: HousesService) { }
 
@@ -18,7 +18,7 @@ export class Option1Component implements OnInit {
 
     //housesList when fetched or after get w/ localstorage is broadcasted here and to other components
     this.housesService.housesReference.subscribe(houses => {
-      this.houses = houses;
+      this.housesList = houses;
     });
   }
 
