@@ -12,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HousesListComponent } from './components/houses/houses-list/houses-list.component';
 import { HouseCardComponent } from './components/houses/house-card/house-card.component';
 import { FilterButtonComponent } from './components/miscellaneous/filter-button/filter-button.component';
-import { SortDropdownComponent } from './components/miscellaneous/sort-dropdown/sort-dropdown.component';
 import { FiltersListComponent } from './components/miscellaneous/filters-list/filters-list.component';
 import { HousesFilterRoomsPipe } from './pipes/houses-filter-rooms.pipe';
 import { AppRoutingModule } from './routing/app-routing.module';
@@ -31,7 +30,6 @@ import { HousesFilterValuePipe } from './pipes/houses-filter-value.pipe';
     HousesListComponent,
     HouseCardComponent,
     FilterButtonComponent,
-    SortDropdownComponent,
     FiltersListComponent,
     HousesFilterRoomsPipe,
     HousesFilterIncompletePipe,
