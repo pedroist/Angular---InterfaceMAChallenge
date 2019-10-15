@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+.title {
+    display: inline;
+
+    .main-title {
+        font-size: 2.7rem;
+        font-weight: 450;
+    }
+}
+
+.grid-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 //Bootstrap theme override
 $theme-colors: (
     "dark": #111111,
