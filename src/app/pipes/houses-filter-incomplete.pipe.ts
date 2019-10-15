@@ -1,12 +1,19 @@
+import { House } from './../models/House';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'housesFilterIncomplete'
+  name: 'housesFilterIncomplete',
+  pure: false
 })
 export class HousesFilterIncompletePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(houses: House[]): House[] {
+    return houses.filter(house =>
+      !house.params
+      || (
+        house.params && (
+          !house.params.rooms || !house.params.value
+        )));
   }
 
 }
