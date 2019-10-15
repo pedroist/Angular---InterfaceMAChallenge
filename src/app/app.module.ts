@@ -18,6 +18,7 @@ import { FiltersListComponent } from './components/miscellaneous/filters-list/fi
 import { HousesFilterRoomsPipe } from './pipes/houses-filter-rooms.pipe';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HousesFilterIncompletePipe } from './pipes/houses-filter-incomplete.pipe';
+import { HousesFilterValueRoomsPipe } from './pipes/houses-filter-value-rooms.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HousesFilterIncompletePipe } from './pipes/houses-filter-incomplete.pip
     SortDropdownComponent,
     FiltersListComponent,
     HousesFilterRoomsPipe,
-    HousesFilterIncompletePipe
+    HousesFilterIncompletePipe,
+    HousesFilterValueRoomsPipe
   ],
   imports: [
     BrowserModule,
