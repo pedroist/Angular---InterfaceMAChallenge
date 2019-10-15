@@ -7,5 +7,6 @@ export interface House {
         rooms?: number,
         value?: number
     },
-    street: string
+    street: string,
+    distance: number
 }

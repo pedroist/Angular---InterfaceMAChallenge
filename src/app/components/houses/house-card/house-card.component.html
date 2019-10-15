@@ -11,6 +11,10 @@
         Price: 
         <span>{{houseCard.params?.value}} €</span>
       </h6>
+      <h6 *ngIf="houseCard?.distance">
+          Distance: 
+          <span>{{houseCard?.distance | number: '1.2-2'}} km</span>
+      </h6>
       {{houseCard.street}}
     </div>
   </div>
