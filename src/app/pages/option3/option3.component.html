@@ -4,7 +4,7 @@
     <span>Sorted by street name, showing houses with incomplete information</span>
   </div>
   <div class="grid-container">
-    <app-house-card *ngFor="let house of (housesList | housesFilterIncomplete); let i=index" 
+    <app-house-card *ngFor="let house of (housesList | housesFilterIncomplete: true); let i=index" 
       [houseCard]="house" 
       [index]=i+1>
     </app-house-card>

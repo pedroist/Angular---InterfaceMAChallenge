@@ -7,7 +7,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class HousesFilterRoomsPipe implements PipeTransform {
 
-  transform(houses: House[], rooms: number): House[] {
+  transform(houses: House[], rooms: number, active: boolean): House[] {
+    if (!active) {
+      return houses;
+    }
+
     return houses.filter(house => house.params && house.params.rooms && house.params.rooms > rooms);
   }
 

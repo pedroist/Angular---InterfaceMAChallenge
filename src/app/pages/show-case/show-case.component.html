@@ -5,7 +5,7 @@
   </div>
   <div class="grid-container">  
     <app-house-card
-      *ngFor="let house of (housesList | housesFilterRooms: 10 | housesFilterValue: 5000000); let i=index" 
+      *ngFor="let house of (housesList | housesFilterRooms: 10: true | housesFilterValue: 5000000: true); let i=index" 
       [houseCard]="house" 
       [index]=i+1>
     </app-house-card>

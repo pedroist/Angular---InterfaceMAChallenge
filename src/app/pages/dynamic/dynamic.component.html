@@ -3,8 +3,16 @@
     <span class="main-title">Dynamic </span>
     <span>Dynamically sorting and filtering</span>
   </div>
+  <div>
+    <app-filters-list></app-filters-list>
+  </div>
   <div class="grid-container">
-    <app-house-card *ngFor="let house of housesList; let i=index" 
+    <app-house-card
+      *ngFor="let house of (housesList 
+          | housesFilterRooms: 10: hasRoomsFilter
+          | housesFilterValue: 5000000: hasValueFilter
+          | housesFilterIncomplete: hasIncompleteFilter);
+          let i=index" 
       [houseCard]="house" 
       [index]=i+1>
     </app-house-card>

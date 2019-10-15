@@ -10,6 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class DynamicComponent implements OnInit {
   housesList: House[] = [];
 
+  /* filters*/
+  hasRoomsFilter: boolean = false;
+  hasValueFilter: boolean = true;
+  hasIncompleteFilter: boolean = true;
+
   constructor(private housesService: HousesService) { }
 
   ngOnInit() {
