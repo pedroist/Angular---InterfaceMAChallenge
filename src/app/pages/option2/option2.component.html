@@ -1,3 +1,6 @@
-<p>
-  option2 works!
-</p>
+<div class="container mt-5 pt-5 grid-container">
+    <app-house-card *ngFor="let house of housesList; let i=index" 
+      [houseCard]="house" 
+      [index]=i+1>
+    </app-house-card>
+  </div>
