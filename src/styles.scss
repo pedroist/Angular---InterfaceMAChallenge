@@ -16,11 +16,21 @@
     flex-wrap: wrap;
 }
 
+//color variables
+$dark:#111111;
+$dark-blue: #203541;
+$secondary: #e5e5e56b;
+$turkey-blue: #249eacd4;
+$turkey-light-blue: #6fd4da;
+$turkey-light-blue-extra: #81d8e2d4;
+
 //Bootstrap theme override
 $theme-colors: (
-    "dark": #111111,
-    "dark-blue": #203541,
-    "secondary": #e5e5e56b,
-    "turkey-blue": #249eacd4
+    "dark": $dark,
+    "dark-blue": $dark-blue,
+    "secondary": $secondary,
+    "turkey-blue": $turkey-blue,
+    "turkey-light-blue": $turkey-light-blue,
+    "turkey-light-blue-extra": $turkey-light-blue-extra
 );
 @import "node_modules/bootstrap/scss/bootstrap";

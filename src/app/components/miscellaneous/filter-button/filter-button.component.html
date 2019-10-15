@@ -1,3 +1,7 @@
-<p>
-  filter-button works!
-</p>
+<button
+  type="button"
+  class="btn inactive"
+  [ngClass]="{'active': filter.active, 'inactive': !filter.active}"
+  (click)="toogleFilter()">
+    {{filter.text}}
+</button>

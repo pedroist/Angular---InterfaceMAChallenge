@@ -9,9 +9,15 @@ export class SortService {
   constructor() { }
 
   sortByDistance(list: House[]): House[] {
-    let filteredList = list.filter(house => house.distance);
 
-    return filteredList.sort((house1, house2) => {
+    return list.sort((house1, house2) => {
+      /***if no distance lets put it at the end of list***/
+      if (!house1.distance)
+        return -1
+
+      if (!house2.distance)
+        return 1
+      /****************************************************/
       if (house1.distance > house2.distance)
         return 1;
 

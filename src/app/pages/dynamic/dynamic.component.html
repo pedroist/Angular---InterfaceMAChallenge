@@ -3,8 +3,8 @@
     <span class="main-title">Dynamic </span>
     <span>Dynamically sorting and filtering</span>
   </div>
-  <div>
-    <app-filters-list></app-filters-list>
+  <div class="mt-2 pl-3">
+    <app-filters-list class="row" [filters]="filtersList"></app-filters-list>
   </div>
   <div class="grid-container">
     <app-house-card

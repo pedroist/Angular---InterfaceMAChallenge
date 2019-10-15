@@ -1,0 +1,15 @@
+@import "../../../../styles.scss";
+
+.inactive {
+    color: white;
+    background-color: $turkey-light-blue-extra !important;
+    border-color: $turkey-light-blue-extra;
+    border-width: 2px;
+}
+
+.active {
+    color: white;
+    background-color: $turkey-blue;
+    border-color: $turkey-light-blue-extra;
+    border-width: 3px;
+}

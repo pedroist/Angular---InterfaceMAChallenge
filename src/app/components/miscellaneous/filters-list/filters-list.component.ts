@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Filter } from './../../../models/Filter';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filters-list',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters-list.component.css']
 })
 export class FiltersListComponent implements OnInit {
+  @Input() filters: Filter[];
 
   constructor() { }
 
