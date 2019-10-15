@@ -15,8 +15,9 @@ import { FilterButtonComponent } from './components/miscellaneous/filter-button/
 import { FilterModalComponent } from './components/miscellaneous/filter-modal/filter-modal.component';
 import { SortDropdownComponent } from './components/miscellaneous/sort-dropdown/sort-dropdown.component';
 import { FiltersListComponent } from './components/miscellaneous/filters-list/filters-list.component';
-import { HousesFilterPipe } from './pipes/houses-filter.pipe';
+import { HousesFilterRoomsPipe } from './pipes/houses-filter-rooms.pipe';
 import { AppRoutingModule } from './routing/app-routing.module';
+import { HousesFilterIncompletePipe } from './pipes/houses-filter-incomplete.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AppRoutingModule } from './routing/app-routing.module';
     FilterModalComponent,
     SortDropdownComponent,
     FiltersListComponent,
-    HousesFilterPipe
+    HousesFilterRoomsPipe,
+    HousesFilterIncompletePipe
   ],
   imports: [
     BrowserModule,

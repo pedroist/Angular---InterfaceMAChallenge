@@ -4,9 +4,9 @@
     <span>Sorted by number of rooms</span>
   </div>
   <div class="grid-container">
-    <app-house-card *ngFor="let house of housesList; let i=index" 
+    <app-house-card *ngFor="let house of (housesList | housesFilterRooms: 5)" 
       [houseCard]="house" 
-      [index]=i+1>
+      [index]=1>
     </app-house-card>
   </div>
 </div>

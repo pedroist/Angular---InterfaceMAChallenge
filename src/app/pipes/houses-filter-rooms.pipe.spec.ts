@@ -1,8 +1,8 @@
-import { HousesFilterPipe } from './houses-filter.pipe';
+import { HousesFilterRoomsPipe } from './houses-filter-rooms.pipe';
 
 describe('HousesFilterPipe', () => {
   it('create an instance', () => {
-    const pipe = new HousesFilterPipe();
+    const pipe = new HousesFilterRoomsPipe();
     expect(pipe).toBeTruthy();
   });
 });
