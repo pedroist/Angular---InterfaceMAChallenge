@@ -4,7 +4,8 @@
     <span>Sorted by distance, 10 rooms up, less than 5 000 000 €</span>
   </div>
   <div class="grid-container">  
-    <app-house-card *ngFor="let house of (housesList | housesFilterValueRooms: 10: 5000000); let i=index" 
+    <app-house-card
+      *ngFor="let house of (housesList | housesFilterRooms: 10 | housesFilterValue: 5000000); let i=index" 
       [houseCard]="house" 
       [index]=i+1>
     </app-house-card>

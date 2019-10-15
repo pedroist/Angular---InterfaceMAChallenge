@@ -18,7 +18,7 @@ import { FiltersListComponent } from './components/miscellaneous/filters-list/fi
 import { HousesFilterRoomsPipe } from './pipes/houses-filter-rooms.pipe';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HousesFilterIncompletePipe } from './pipes/houses-filter-incomplete.pipe';
-import { HousesFilterValueRoomsPipe } from './pipes/houses-filter-value-rooms.pipe';
+import { HousesFilterValuePipe } from './pipes/houses-filter-value.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { HousesFilterValueRoomsPipe } from './pipes/houses-filter-value-rooms.pi
     FiltersListComponent,
     HousesFilterRoomsPipe,
     HousesFilterIncompletePipe,
-    HousesFilterValueRoomsPipe
+    HousesFilterValuePipe
   ],
   imports: [
     BrowserModule,

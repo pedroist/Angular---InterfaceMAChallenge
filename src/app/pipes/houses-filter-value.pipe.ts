@@ -2,17 +2,15 @@ import { House } from './../models/House';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'housesFilterValueRooms',
+  name: 'housesFilterValue',
   pure: false
 })
-export class HousesFilterValueRoomsPipe implements PipeTransform {
+export class HousesFilterValuePipe implements PipeTransform {
 
-  transform(houses: House[], rooms: number, value: number): House[] {
+  transform(houses: House[], value: number): House[] {
     return houses.filter(house =>
       house.params
-      && house.params.rooms
       && house.params.value
-      && house.params.rooms >= rooms
       && house.params.value <= value
     );
   }
