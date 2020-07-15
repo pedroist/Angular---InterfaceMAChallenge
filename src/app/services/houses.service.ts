@@ -2,7 +2,8 @@ import { DistanceService } from './distance.service';
 import { House } from './../models/House';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -31,8 +32,20 @@ export class HousesService {
   ) { }
 
   getHousesHttpRequest(): Observable<any> {
-    let data = this.http.get(this.url);
+
+    /* OPTION1 - FROM JSON LOCAL FILE: */
+    return this.getLocalJSON();
+
+    /* // OPTION2 - FROM HTTP SERVICE:
+    let data = this.http
+      .get(this.url)
+      .pipe(catchError(this.handleError));
     return data;
+    */
+
+    //NOTE: if we wanted to make dinamically this switch: test the service,
+    // if fails use the local JSON file, we could make interceptor and intercept the response
+    // to return file.
   }
 
   getHousesInitialization() {
@@ -59,5 +72,22 @@ export class HousesService {
         this.housesSource.next(data.houses);
       });
     }
+  }
+
+  handleError(error) {
+
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // client-side error
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    return throwError(errorMessage);
+  }
+
+  getLocalJSON(): Observable<any> {
+    return this.http.get("assets/houses-data-fetched.json");
   }
 }
